@@ -1,0 +1,22 @@
+public class Master implements Transaction {
+	private int balance=10000;
+
+	@Override
+	public int credit(int amount) {
+		return balance+amount;
+	}
+
+	@Override
+	public int debit(int amount) {
+		return balance-amount;
+	}
+
+	public static void main(String[] args) {
+		Master obj = new Master();
+		System.out.println("Total amount >> "+obj.credit(1000)); // we had total 10000 balance and we credited 1000 in acc.
+		System.out.println("Total amount >> "+obj.debit(1000)); // we had total 10000 balance and we debited 1000 from acc.
+
+
+	}
+
+}
